@@ -12,5 +12,8 @@ byte _read_i2c(int address, int _register) {
 
 CMPS10::CMPS10() {
     compass_address = 0x60;
-    Serial.println("initiased");
+}
+
+int CMPS10::bearing() {
+    return _read_i2c(compass_address, 1);
 }

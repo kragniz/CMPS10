@@ -6,6 +6,7 @@
 class CMPS10 {
     public:
         CMPS10();
+        int bearing();
     private:
         int compass_address;
 };
