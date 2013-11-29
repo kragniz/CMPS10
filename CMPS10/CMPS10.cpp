@@ -1,3 +1,12 @@
+/*
+ * CMPS10.cpp - Library for easy use of the CMPS10 tilt-compensating digital
+ * compass.
+ *
+ * Copyright (C) 2013 Louis Taylor <kragniz@gmail.com>
+ *
+ * This code is released under the terms of the LGPLv3 licence.
+ */
+
 #include "Arduino.h"
 #include "Wire.h"
 #include "CMPS10.h"
