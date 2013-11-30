@@ -13,6 +13,7 @@
 
 #define COMPASS_BEARING 1
 #define COMPASS_PITCH 4
+#define COMPASS_ROLL 5
 
 byte _read_i2c(int address, int _register) {
   Wire.beginTransmission(address);
@@ -33,4 +34,8 @@ uint8_t CMPS10::bearing() {
 
 int8_t CMPS10::pitch() {
     return (int8_t) _read_i2c(compass_address, COMPASS_PITCH);
+}
+
+int8_t CMPS10::roll() {
+    return (int8_t) _read_i2c(compass_address, COMPASS_ROLL);
 }
