@@ -12,5 +12,5 @@ tilt-compensating compass with an Arduino.
 
 ##License
 
-This code is released under the terms of the LGPLv3 license. See `LICENSE` for
+This code is released under the terms of the LGPLv3 license. See `COPYING` for
 more details.
