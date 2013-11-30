@@ -15,7 +15,7 @@
 class CMPS10 {
     public:
         CMPS10();
-        uint8_t bearing();
+        int8_t bearing();
         int8_t pitch();
         int8_t roll();
     private:
