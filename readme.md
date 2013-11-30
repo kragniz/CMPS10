@@ -7,7 +7,7 @@ tilt-compensating compass with an Arduino.
 
 ##Usage
 
-![axes](https://raw.github.com/kragniz/CMPS10/master/axes.png)
+![axes](https://raw.github.com/kragniz/CMPS10/master/examples/axes.png)
 
 
 ##License
