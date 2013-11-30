@@ -15,7 +15,8 @@
 class CMPS10 {
     public:
         CMPS10();
-        int bearing();
+        uint8_t bearing();
+        int8_t pitch();
     private:
         int compass_address;
 };

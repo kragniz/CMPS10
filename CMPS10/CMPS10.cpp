@@ -12,6 +12,7 @@
 #include "CMPS10.h"
 
 #define COMPASS_BEARING 1
+#define COMPASS_PITCH 4
 
 byte _read_i2c(int address, int _register) {
   Wire.beginTransmission(address);
@@ -23,8 +24,13 @@ byte _read_i2c(int address, int _register) {
 
 CMPS10::CMPS10() {
     compass_address = 0x60;
+    Wire.begin();
 }
 
-int CMPS10::bearing() {
+uint8_t CMPS10::bearing() {
     return _read_i2c(compass_address, COMPASS_BEARING);
+}
+
+int8_t CMPS10::pitch() {
+    return (int8_t) _read_i2c(compass_address, COMPASS_PITCH);
 }
