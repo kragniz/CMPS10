@@ -16,6 +16,8 @@
 #define COMPASS_PITCH 4
 #define COMPASS_ROLL 5
 
+#define COMPASS_I2C_ADDRESS 0x60
+
 /*
  * Return a byte from a register in the I2C device on a particular address.
  */
@@ -27,9 +29,17 @@ byte _read_i2c(int address, int _register) {
   return Wire.read();
 }
 
-CMPS10::CMPS10() {
-    compass_address = 0x60;
+void CMPS10::init(int i2c_address) {
+    compass_address = i2c_address;
     Wire.begin();
+}
+
+CMPS10::CMPS10(int i2c_address) {
+    init(i2c_address);
+}
+
+CMPS10::CMPS10() {
+    init(COMPASS_I2C_ADDRESS);
 }
 
 /*

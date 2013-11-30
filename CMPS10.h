@@ -15,11 +15,13 @@
 class CMPS10 {
     public:
         CMPS10();
+        CMPS10(int i2c_address);
         int8_t bearing();
         int8_t pitch();
         int8_t roll();
     private:
         int compass_address;
+        void init(int i2c_address);
 };
 
 #endif
