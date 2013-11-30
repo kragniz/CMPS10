@@ -13,7 +13,10 @@ void loop() {
   Serial.print(compass.bearing());
   
   Serial.print(" Pitch: ");
-  Serial.println((int) compass.pitch());
+  Serial.print(compass.pitch());
+
+  Serial.print(" Roll: ");
+  Serial.println(compass.roll());
   delay(100);
 }
 
