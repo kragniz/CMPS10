@@ -22,11 +22,11 @@
  * Return a byte from a register in the I2C device on a particular address.
  */
 byte _read_i2c(int address, int _register) {
-  Wire.beginTransmission(address);
-  Wire.write(_register);
-  Wire.endTransmission();
-  Wire.requestFrom(address, 1);
-  return Wire.read();
+    Wire.beginTransmission(address);
+    Wire.write(_register);
+    Wire.endTransmission();
+    Wire.requestFrom(address, 1);
+    return Wire.read();
 }
 
 void CMPS10::init(int i2c_address) {
