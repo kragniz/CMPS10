@@ -50,14 +50,16 @@ int8_t CMPS10::bearing() {
 }
 
 /*
- * Return the pitch in degrees from the horizontal plane.
+ * Return the pitch in degrees from the horizontal plane. 0 when the board is
+ * flat and +/- 85 degrees when tilted in either direction.
  */
 int8_t CMPS10::pitch() {
     return (int8_t) _read_i2c(compass_address, COMPASS_PITCH);
 }
 
 /*
- * Return the roll in degrees from the horizontal plane.
+ * Return the roll in degrees from the horizontal plane. 0 when the board is
+ * flat and +/- 85 degrees when tilted in either direction.
  */
 int8_t CMPS10::roll() {
     return (int8_t) _read_i2c(compass_address, COMPASS_ROLL);
