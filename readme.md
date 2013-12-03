@@ -21,6 +21,17 @@ Usage
 
 ![axes](https://raw.github.com/kragniz/CMPS10/master/examples/axes.png)
 
+To use this library, include the header file:
+
+```cpp
+#include <CMPS10.h>
+```
+
+Then create an instance of the compass
+
+```cpp
+CMPS10 my_compass;
+```
 
 License
 -------
