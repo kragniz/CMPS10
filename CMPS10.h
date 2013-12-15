@@ -17,6 +17,7 @@ class CMPS10 {
         CMPS10();
         CMPS10(int i2c_address);
         int bearing_byte();
+        double bearing();
         int8_t pitch();
         int8_t roll();
     private:

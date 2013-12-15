@@ -13,6 +13,8 @@
 
 // I2C registers
 #define COMPASS_BEARING 1
+#define COMPASS_DECIMAL_HIGH 2
+#define COMPASS_DECIMAL_LOW 3
 #define COMPASS_PITCH 4
 #define COMPASS_ROLL 5
 
@@ -43,7 +45,16 @@ CMPS10::CMPS10() {
 }
 
 /*
- * Return the bearing. 0-255 for a full circle.
+ * Return the bearing in degrees. 0-359.9 for a full circle.
+ */
+double CMPS10::bearing() {
+    int high = _read_i2c(compass_address, COMPASS_DECIMAL_HIGH) << 8;
+    int low = _read_i2c(compass_address, COMPASS_DECIMAL_LOW);
+    return (high + low) / 10.0;
+}
+
+/*
+ * Return the bearing as a byte. 0-255 for a full circle.
  */
 int CMPS10::bearing_byte() {
     return _read_i2c(compass_address, COMPASS_BEARING);
