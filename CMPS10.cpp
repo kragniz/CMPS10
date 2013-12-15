@@ -45,7 +45,7 @@ CMPS10::CMPS10() {
 /*
  * Return the bearing. 0-255 for a full circle.
  */
-int CMPS10::bearing() {
+int CMPS10::bearing_byte() {
     return _read_i2c(compass_address, COMPASS_BEARING);
 }
 
