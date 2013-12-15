@@ -31,6 +31,12 @@ byte CMPS10::read_i2c(int address, int _register) {
     return Wire.read();
 }
 
+double CMPS10::read_word(int high_address, int low_address) {
+    int high = read_i2c(compass_address, high_address) << 8;
+    int low = read_i2c(compass_address, low_address);
+    return (high + low) / 10.0;
+}
+
 void CMPS10::init(int i2c_address) {
     compass_address = i2c_address;
     Wire.begin();
@@ -48,9 +54,7 @@ CMPS10::CMPS10() {
  * Return the bearing in degrees. 0-359.9 for a full circle.
  */
 double CMPS10::bearing() {
-    int high = read_i2c(compass_address, COMPASS_DECIMAL_HIGH) << 8;
-    int low = read_i2c(compass_address, COMPASS_DECIMAL_LOW);
-    return (high + low) / 10.0;
+    return read_word(COMPASS_DECIMAL_HIGH, COMPASS_DECIMAL_LOW);
 }
 
 /*
