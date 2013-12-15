@@ -23,7 +23,7 @@
 /*
  * Return a byte from a register in the I2C device on a particular address.
  */
-byte _read_i2c(int address, int _register) {
+byte CMPS10::read_i2c(int address, int _register) {
     Wire.beginTransmission(address);
     Wire.write(_register);
     Wire.endTransmission();
@@ -48,8 +48,8 @@ CMPS10::CMPS10() {
  * Return the bearing in degrees. 0-359.9 for a full circle.
  */
 double CMPS10::bearing() {
-    int high = _read_i2c(compass_address, COMPASS_DECIMAL_HIGH) << 8;
-    int low = _read_i2c(compass_address, COMPASS_DECIMAL_LOW);
+    int high = read_i2c(compass_address, COMPASS_DECIMAL_HIGH) << 8;
+    int low = read_i2c(compass_address, COMPASS_DECIMAL_LOW);
     return (high + low) / 10.0;
 }
 
@@ -57,7 +57,7 @@ double CMPS10::bearing() {
  * Return the bearing as a byte. 0-255 for a full circle.
  */
 int CMPS10::bearing_byte() {
-    return _read_i2c(compass_address, COMPASS_BEARING);
+    return read_i2c(compass_address, COMPASS_BEARING);
 }
 
 /*
@@ -65,7 +65,7 @@ int CMPS10::bearing_byte() {
  * flat and +/- 85 degrees when tilted in either direction.
  */
 int8_t CMPS10::pitch() {
-    return (int8_t) _read_i2c(compass_address, COMPASS_PITCH);
+    return (int8_t) read_i2c(compass_address, COMPASS_PITCH);
 }
 
 /*
@@ -73,5 +73,5 @@ int8_t CMPS10::pitch() {
  * flat and +/- 85 degrees when tilted in either direction.
  */
 int8_t CMPS10::roll() {
-    return (int8_t) _read_i2c(compass_address, COMPASS_ROLL);
+    return (int8_t) read_i2c(compass_address, COMPASS_ROLL);
 }

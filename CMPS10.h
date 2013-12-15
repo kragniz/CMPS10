@@ -22,6 +22,7 @@ class CMPS10 {
         int8_t roll();
     private:
         int compass_address;
+        byte read_i2c(int address, int _register);
         void init(int i2c_address);
 };
 
