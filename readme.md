@@ -33,6 +33,41 @@ Then create an instance of the compass
 CMPS10 my_compass;
 ```
 
+You can now access the bearing of the compass with
+
+```cpp
+my_compass.bearing();
+```
+
+Methods
+-------
+
+```cpp
+float bearing()
+```
+
+```cpp
+int bearing_byte()
+```
+
+```cpp
+int8_t pitch()
+
+int8_t roll()
+```
+
+```cpp
+float acceleration()
+```
+
+```cpp
+float acceleration_x()
+
+float acceleration_y()
+
+float acceleration_z()
+```
+
 License
 -------
 
