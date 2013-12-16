@@ -17,19 +17,20 @@ class CMPS10 {
         CMPS10();
         CMPS10(int i2c_address);
         int bearing_byte();
-        double bearing();
+        float bearing();
         int8_t pitch();
         int8_t roll();
-        double acceleration_x();
-        double acceleration_y();
-        double acceleration_z();
+        float acceleration_x();
+        float acceleration_y();
+        float acceleration_z();
+
     private:
         int compass_address;
         byte read_i2c(int address, int _register);
-        double read_word(int high_address, int low_address);
+        float read_word(int high_address, int low_address);
         int16_t read_int16_t(int high_address, int low_address);
         void init(int i2c_address);
-        double raw_to_g(int16_t raw);
+        float raw_to_g(int16_t raw);
 };
 
 #endif
