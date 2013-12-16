@@ -88,18 +88,30 @@ float CMPS10::raw_to_g(int16_t raw) {
     return raw / (65536.0/4);
 }
 
+/*
+ * Return the force in the x-axis
+ */
 float CMPS10::acceleration_x() {
     return raw_to_g(read_int16_t(ACCEL_X_HIGH, ACCEL_X_LOW));
 }
 
+/*
+ * Return the force in the y-axis
+ */
 float CMPS10::acceleration_y() {
     return raw_to_g(read_int16_t(ACCEL_Y_HIGH, ACCEL_Y_LOW));
 }
 
+/*
+ * Return the force in the z-axis
+ */
 float CMPS10::acceleration_z() {
     return raw_to_g(read_int16_t(ACCEL_Z_HIGH, ACCEL_Z_LOW));
 }
 
+/*
+ * Return the overall force on the accelerometer
+ */
 float CMPS10::acceleration() {
     return sqrt(
                 pow(this->acceleration_x(), 2) +
