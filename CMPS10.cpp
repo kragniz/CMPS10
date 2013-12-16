@@ -37,6 +37,12 @@ double CMPS10::read_word(int high_address, int low_address) {
     return (high + low) / 10.0;
 }
 
+int16_t CMPS10::read_int16_t(int high_address, int low_address) {
+    int high = read_i2c(compass_address, high_address) << 8;
+    int low = read_i2c(compass_address, low_address);
+    return high + low;
+}
+
 void CMPS10::init(int i2c_address) {
     compass_address = i2c_address;
     Wire.begin();
@@ -78,4 +84,8 @@ int8_t CMPS10::pitch() {
  */
 int8_t CMPS10::roll() {
     return (int8_t) read_i2c(compass_address, COMPASS_ROLL);
+}
+
+int16_t CMPS10::acceleration_x() {
+    return read_int16_t(16, 17);
 }
