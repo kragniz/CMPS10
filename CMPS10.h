@@ -21,6 +21,8 @@ class CMPS10 {
         int8_t pitch();
         int8_t roll();
         double acceleration_x();
+        double acceleration_y();
+        double acceleration_z();
     private:
         int compass_address;
         byte read_i2c(int address, int _register);

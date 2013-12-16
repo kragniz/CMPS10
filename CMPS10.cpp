@@ -93,3 +93,11 @@ double CMPS10::raw_to_g(int16_t raw) {
 double CMPS10::acceleration_x() {
     return raw_to_g(read_int16_t(16, 17));
 }
+
+double CMPS10::acceleration_y() {
+    return raw_to_g(read_int16_t(18, 19));
+}
+
+double CMPS10::acceleration_z() {
+    return raw_to_g(read_int16_t(20, 21));
+}
