@@ -20,6 +20,7 @@ class CMPS10 {
         float bearing();
         int8_t pitch();
         int8_t roll();
+        float acceleration();
         float acceleration_x();
         float acceleration_y();
         float acceleration_z();

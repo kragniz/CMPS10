@@ -101,3 +101,11 @@ float CMPS10::acceleration_y() {
 float CMPS10::acceleration_z() {
     return raw_to_g(read_int16_t(20, 21));
 }
+
+float CMPS10::acceleration() {
+    return sqrt(
+                pow(this->acceleration_x(), 2) +
+                pow(this->acceleration_y(), 2) +
+                pow(this->acceleration_z(), 2)
+           );
+}
