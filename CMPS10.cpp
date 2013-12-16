@@ -81,6 +81,9 @@ int8_t CMPS10::roll() {
     return (int8_t) read_i2c(compass_address, COMPASS_ROLL);
 }
 
+/*
+ * Convert and return the raw output of the accelerometer to units of g
+ */
 float CMPS10::raw_to_g(int16_t raw) {
     return raw / (65536.0/4);
 }
