@@ -12,6 +12,13 @@
 
 #include "Arduino.h"
 
+// I2C registers
+#define COMPASS_BEARING 1
+#define COMPASS_DECIMAL_HIGH 2
+#define COMPASS_DECIMAL_LOW 3
+#define COMPASS_PITCH 4
+#define COMPASS_ROLL 5
+
 class CMPS10 {
     public:
         CMPS10();

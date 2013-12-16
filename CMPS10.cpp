@@ -11,13 +11,6 @@
 #include "Wire.h"
 #include "CMPS10.h"
 
-// I2C registers
-#define COMPASS_BEARING 1
-#define COMPASS_DECIMAL_HIGH 2
-#define COMPASS_DECIMAL_LOW 3
-#define COMPASS_PITCH 4
-#define COMPASS_ROLL 5
-
 #define COMPASS_I2C_ADDRESS 0x60
 
 /*
