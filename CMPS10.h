@@ -2,6 +2,8 @@
  * CMPS10.h - Library for easy use of the CMPS10 tilt-compensating digital
  * compass.
  *
+ * https://github.com/kragniz/CMPS10
+ *
  * Copyright (C) 2013 Louis Taylor <kragniz@gmail.com>
  *
  * This code is released under the terms of the LGPLv3 licence.
