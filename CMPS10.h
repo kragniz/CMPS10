@@ -13,18 +13,19 @@
 #include "Arduino.h"
 
 // I2C registers
-#define COMPASS_BEARING 1
+#define COMPASS_BEARING      1
 #define COMPASS_DECIMAL_HIGH 2
-#define COMPASS_DECIMAL_LOW 3
-#define COMPASS_PITCH 4
-#define COMPASS_ROLL 5
+#define COMPASS_DECIMAL_LOW  3
+#define COMPASS_PITCH        4
+#define COMPASS_ROLL         5
 
+// accelerometer registers
 #define ACCEL_X_HIGH 16
-#define ACCEL_X_LOW 17
+#define ACCEL_X_LOW  17
 #define ACCEL_Y_HIGH 18
-#define ACCEL_Y_LOW 19
+#define ACCEL_Y_LOW  19
 #define ACCEL_Z_HIGH 20
-#define ACCEL_Z_LOW 21
+#define ACCEL_Z_LOW  21
 
 class CMPS10 {
     public:
