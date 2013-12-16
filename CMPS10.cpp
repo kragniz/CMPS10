@@ -86,6 +86,10 @@ int8_t CMPS10::roll() {
     return (int8_t) read_i2c(compass_address, COMPASS_ROLL);
 }
 
-int16_t CMPS10::acceleration_x() {
-    return read_int16_t(16, 17);
+double CMPS10::raw_to_g(int16_t raw) {
+    return raw / (65536.0/4);
+}
+
+double CMPS10::acceleration_x() {
+    return raw_to_g(read_int16_t(16, 17));
 }
