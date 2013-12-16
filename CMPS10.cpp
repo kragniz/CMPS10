@@ -84,15 +84,15 @@ float CMPS10::raw_to_g(int16_t raw) {
 }
 
 float CMPS10::acceleration_x() {
-    return raw_to_g(read_int16_t(16, 17));
+    return raw_to_g(read_int16_t(ACCEL_X_HIGH, ACCEL_X_LOW));
 }
 
 float CMPS10::acceleration_y() {
-    return raw_to_g(read_int16_t(18, 19));
+    return raw_to_g(read_int16_t(ACCEL_Y_HIGH, ACCEL_Y_LOW));
 }
 
 float CMPS10::acceleration_z() {
-    return raw_to_g(read_int16_t(20, 21));
+    return raw_to_g(read_int16_t(ACCEL_Z_HIGH, ACCEL_Z_LOW));
 }
 
 float CMPS10::acceleration() {
