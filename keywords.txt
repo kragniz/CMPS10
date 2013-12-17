@@ -1,4 +1,9 @@
 CMPS10	KEYWORD1
 bearing	KEYWORD2
+bearing_byte	KEYWORD2
 pitch	KEYWORD2
 roll	KEYWORD2
+acceleration	KEYWORD2
+acceleration_x	KEYWORD2
+acceleration_y	KEYWORD2
+acceleration_z	KEYWORD2
