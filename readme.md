@@ -1,4 +1,4 @@
-CMPS10
+CMPS10-arduino
 ======
 
 Library to read data from a
@@ -41,6 +41,8 @@ my_compass.bearing();
 
 Methods
 -------
+
+Return the bearing in degrees as a float, 0-359.9:
 
 ```cpp
 float bearing()
