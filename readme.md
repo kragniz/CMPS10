@@ -48,6 +48,8 @@ Return the bearing in degrees as a float, 0-359.9:
 float bearing()
 ```
 
+Return the bearing as a byte, 0-255:
+
 ```cpp
 int bearing_byte()
 ```
