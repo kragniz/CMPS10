@@ -60,6 +60,8 @@ int8_t pitch()
 int8_t roll()
 ```
 
+Return the overall acceleration on the accelerometer.
+
 ```cpp
 float acceleration()
 ```
