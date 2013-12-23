@@ -60,11 +60,13 @@ int8_t pitch()
 int8_t roll()
 ```
 
-Return the overall acceleration on the accelerometer.
+Return the overall acceleration on the accelerometer, measured in units of *g*.
 
 ```cpp
 float acceleration()
 ```
+
+Return the acceleration in each of the three axis.
 
 ```cpp
 float acceleration_x()
