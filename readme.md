@@ -16,6 +16,8 @@ Copy the files into the Arduino library directory
 
     $ cp -r CMPS10 ~/sketchbook/libraries/CMPS10
 
+Then restart the Arduino IDE.
+
 Usage
 -----
 
